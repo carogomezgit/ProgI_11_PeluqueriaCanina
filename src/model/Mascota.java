@@ -73,7 +73,6 @@ public class Mascota {
 
 
     // metodos
-    @override
     public String toStringMascota() {
         return "\n Nombre de mascota: " + this.nombre +
                 "\n Edad: " + this.edad +

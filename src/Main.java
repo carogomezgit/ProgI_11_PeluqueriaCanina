@@ -33,37 +33,9 @@ public class Main {
 			Logger.getLogger(Main.class.getName());
 
 	public static void main(String[] args) {
-		// creamos objetos (recordar la cantidad de argumentos que pide el constructor)
-		Mascota mascota1 = new Mascota("Mochi", 4, Especie.GATO, "Siamés", "Juli");
-		Mascota mascota2 = new Mascota("Kuki", 6, Especie.GATO, "Persa", "scoops");
-		Mascota mascota3 = new Mascota("Blacky", 3, Especie.PERRO, "Mestizo", "Ara");
-		Mascota mascota4 = new Mascota("Amelia", 7, Especie.PERRO, "Corgi", "María");
-		Mascota mascota5 = new Mascota("Pyon", 2, Especie.PATO, "Pekin", "Miyo");
+    Mascota[] mascotas = CargaDatos.cargarMascotas();
+    Servicio[] servicios = CargaDatos.cargarServicios();
+    Turno[] turnos = CargaDatos.cargarTurnos(mascotas, servicios);
 
-		Servicio servicio1 = new Servicio(mascota1, TipoServicio.BAÑO, "Baño completo", 35, 5000);
-		Servicio servicio2 = new Servicio(mascota2, TipoServicio.CORTEDEPELO, "Corte parejo de pelaje", 20, 4500);
-		Servicio servicio3 = new Servicio(mascota3, TipoServicio.LIMPIEZADEOIDOS, "Limpieza de oídos", 20, 3800);
-		Servicio servicio4 = new Servicio(mascota4, TipoServicio.CORTEDEPELO, "Corte de pelo corto", 18, 4200);
-		Servicio servicio5 = new Servicio(mascota5, TipoServicio.LIMPIEZADEOIDOS, "Limpieza de oídos", 20, 3800);
-
-		Turno turno1 = new Turno(mascota1, servicio1, "5/22/2025 21:00", Estado.REALIZADO);
-		Turno turno2 = new Turno(mascota2, servicio2, "8/18/2025 21:00", Estado.PROGRAMADO);
-		Turno turno3 = new Turno(mascota3, servicio3, "6/29/2025 21:00", Estado.PROGRAMADO);
-		Turno turno4 = new Turno(mascota4, servicio4, "3/14/2025 21:00", Estado.REALIZADO);
-		Turno turno5 = new Turno(mascota5, servicio5, "5/9/2025 21:00", Estado.CANCELADO);
-
-		// crear arrays
-		Mascota[] arrayMascota = new Mascota[5];
-		Turno[] arrayTurno = new Turno[10];
-
-		public String buscarNombreDeMascota(Mascota[] arrayMascota){
-			String nombreMascota;
-
-			for(int i=0; i < arrayMascota.length; i++){
-
-			}
-			return nombreMascota;
-		}
-
-	}
+  }
 }
